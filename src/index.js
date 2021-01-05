@@ -1,17 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*var React = require('react'); //For only to show html content, it was before
+var ReactDOM = require('react-dom'); //For use html dom object*/
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import React from 'react'; //For only to show html content, its mordern code
+import ReactDOM from 'react-dom'; //For use html dom object
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+var myOwnVar = <h1>Hello World...</h1>;
+
+//ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('root')); //h1 tag is call JSX (Javascript XML or extension)
+ReactDOM.render(myOwnVar, document.getElementById('root')); //h1 tag is call JSX (Javascript XML or extension)
