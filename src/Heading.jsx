@@ -1,12 +1,12 @@
 import React from 'react';
 
 function Heading() {
-    var checkTest = <p>All fields are mendatory.</p>;
+    var checkTest = <p>All fields are mendatory *</p>;
     return checkTest
 }
 
 function Create_account() {
-    return <p>Please fill in this form to create an account.</p>
+    return <p>Please fill this form to create an account.</p>
 }
 
 function Paragraph() {

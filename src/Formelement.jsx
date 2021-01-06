@@ -4,14 +4,14 @@ import Headings, { Paragraph, Create_account } from './Heading';
 var date = new Date().getDate();
 
 var cssStyle = {};
-if(date == 6) {
+if(date == 7) {
 	cssStyle.color = 'green';
 } else {
 	cssStyle.color = 'red';
 }
 
 function Formelement() {
-    return <div className="test">
+    return (<div className="test">
             <form action="/action_page.php">
                 <div className="container">							
                     <h1>Register</h1>
@@ -19,6 +19,12 @@ function Formelement() {
                     <Headings />
                     <Paragraph />
                     <hr/>
+                    <label htmlFor="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="First Name" name="fname" id="fname" required />
+
+                    <label htmlFor="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Last Name" name="lname" id="lname" required />
+
                     <label htmlFor="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" id="email" required />
 
@@ -37,7 +43,7 @@ function Formelement() {
                     <p>Already have an account? <a href="#">Sign in</a>.</p>
                 </div>
             </form>
-        </div>
+        </div>);
 }
 
 export default Formelement;
