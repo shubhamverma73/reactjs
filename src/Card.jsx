@@ -21,25 +21,25 @@ function Card(props) {
 
 const Cdata = [
 				{
-					//"key": 1,
+					id: 1,
 					imgsrc: "https://www.w3schools.com/howto/img_avatar.png",
 					cardname: "Card 1",
 					position: "Software Engineer",
 					redirect: "https://www.flipkart.com/"
 				},{
-					//"key": 2,
+					id: 2,
 					imgsrc: "https://www.w3schools.com/howto/img_avatar.png",
 					cardname: "Card 2",
 					position: "Web Developer",
 					redirect: "https://www.flipkart.com/"
 				},{
-					//"key": 3,
+					id: 3,
 					imgsrc: "https://www.w3schools.com/howto/img_avatar.png",
 					cardname: "Card 3",
 					position: "PHP Application Developer",
 					redirect: "https://www.flipkart.com/"
 				},{
-					//"key": 4,
+					id: 4,
 					imgsrc: "https://www.w3schools.com/howto/img_avatar.png",
 					cardname: "Card 4",
 					position: "Software Developer",

@@ -12,10 +12,9 @@ import Card, {Cdata} from './Card';
 ReactDOM.render(
     <>
         <div className="row">
-            {Cdata.map((val, index) => {
-                console.log(index);
+            {Cdata.map((val) => {
                 return (
-                            <Card key={val.index} imgsrc={val.imgsrc} cardname={val.cardname} position={val.position} linkRedirect={val.redirect} />
+                            <Card key={val.id} imgsrc={val.imgsrc} cardname={val.cardname} position={val.position} linkRedirect={val.redirect} />
                         );
             })}
         </div>
