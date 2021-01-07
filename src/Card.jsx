@@ -5,8 +5,8 @@ function Card(props) {
 			<>
 			<div className="column">
 				<div className="card">
-					<img src={props.imgsrc} alt="Avatar" style={{width:"100%"}} />
-					<div className="container">
+					<img className="imageClass" src={props.imgsrc} alt="Avatar" style={{width:"100%"}} />
+					<div className="container textBorderClass">
 						<h4><b>{props.cardname}</b></h4> 
 						<p>{props.position}</p> 
 					</div>
