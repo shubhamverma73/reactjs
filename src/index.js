@@ -9,6 +9,12 @@ import Card, {Cdata} from './Card';
     );
 }*/
 
+var getVal = 1;
+const clickFunction = () => {
+    getVal++;
+    document.getElementById('increaseCount').innerHTML = getVal;
+}
+
 ReactDOM.render(
     <>
         <div className="row">
@@ -17,6 +23,10 @@ ReactDOM.render(
                             <Card key={val.id} imgsrc={val.imgsrc} cardname={val.cardname} position={val.position} linkRedirect={val.redirect} />
                         );
             })}
+        </div>
+        <div className="manageDivCountBox">
+            <span id="increaseCount">1</span><br/>
+            <button className="buttonClass" onClick={clickFunction}>Click Here</button>
         </div>
     </>,
         document.getElementById('root')
