@@ -1,5 +1,23 @@
 import React from 'react';
 
+/*const Card = (props) => {
+	return (
+			<>
+			<a href={props.linkRedirect} target="_blank" rel="noreferrer">
+				<div className="column">
+					<div className="card">
+						<img className="imageClass" src={props.imgsrc} alt="Avatar" style={{width:"100%"}} />
+						<div className="container textBorderClass">
+							<h4><b>{props.cardname}</b></h4> 
+							<p>{props.position}</p> 
+						</div>
+					</div>
+				</div>
+			</a>
+			</>
+		);
+}*/
+
 function Card(props) {
 	return (
 			<>
