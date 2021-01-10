@@ -4,7 +4,7 @@ import Headings, { Paragraph, Create_account } from './Heading';
 var date = new Date().getDate();
 
 var cssStyle = {};
-if(date == 7) {
+if(date === 7) {
 	cssStyle.color = 'green';
 } else {
 	cssStyle.color = 'red';
@@ -34,7 +34,7 @@ function Formelement() {
                     <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
                     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required />
                     <hr/>
-                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                    <p>By creating an account you agree to our <a href="/home">Terms & Privacy</a>.</p>
 
                     <button type="submit" className="registerbtn">Register</button>
                 </div>
