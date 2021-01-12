@@ -19,8 +19,8 @@ const IncrementVal = () => {
             <>
                 <div className="manageDivCountBox">
                     <span id="increaseCount">{defaultVal}</span><br/>
-                    <button className="buttonClass" onClick={increaseFunction}>Increase Value</button>
-                    <button className="buttonClass" onClick={decreaseFunction}>Decrease Value</button>
+                    <button className="buttonClassValue" onClick={increaseFunction}><i className="fas fa-plus-circle"></i></button>
+                    <button className="buttonClassValue" onClick={decreaseFunction}><i className="fas fa-minus-circle"></i></button>
                 </div>
             </>
         );
