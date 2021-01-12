@@ -1,6 +1,5 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
 import Navigation from './components/layout/Navigation';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';

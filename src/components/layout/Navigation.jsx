@@ -1,40 +1,33 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
+import * as ReactBoot from 'react-bootstrap';
 
 const Navigation = () => {
 
-    const script = document.createElement('script');
+    /*const script = document.createElement('script');
     script.src = "../../../node_modules/bootstrap/dist/js/bootstrap.js";
-    script.async = true;
+    script.async = true;*/
 
     return (
         <>
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+                <ReactBoot.Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
                     <Link className="navbar-brand" to="/">React</Link>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" exact to="/">Home</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" exact to="/about">About</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" exact to="/contact">Contact</NavLink>
-                            </li>
-                            <li className="nav-item dropdown">
-                            <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                    <ReactBoot.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <ReactBoot.Navbar.Collapse id="responsive-navbar-nav">
+                        <ReactBoot.Nav className="mr-auto">
+                        <NavLink className="nav-link" to="/">Home</NavLink>
+                        <NavLink className="nav-link" to="/about">About</NavLink>
+                        <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                        <ReactBoot.NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                            <NavLink className="dropdown-item" to="/increment-value">                                    
+                                <ReactBoot.NavDropdown.Item href="/increment-value">Link</ReactBoot.NavDropdown.Item>
                             </NavLink>
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink className="dropdown-item" to="#">Action</NavLink>
-                            </div>
-                        </li>
-                        </ul>
-                    </div>
+                        </ReactBoot.NavDropdown>
+                        </ReactBoot.Nav>
+                    </ReactBoot.Navbar.Collapse>
                     <NavLink className="btn btn-dark" to="/users/add">Add User</NavLink>
-                </nav>
+                </ReactBoot.Navbar>
             </div>
         </>
     );

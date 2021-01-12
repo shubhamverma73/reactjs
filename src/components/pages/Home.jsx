@@ -39,14 +39,14 @@ const Home = () => {
                         <tbody>
                             {
                                 users.map((user, index) => (
-                                    <tr>
+                                    <tr key={index+1}>
                                         <th scope="row">{index+1}</th>
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.username}</td>
                                         <td><Link className="btn btn-primary" to={`/users/view/${user.id}`}>View</Link>&nbsp;&nbsp;
                                         <Link className="btn btn-success" to={`/users/edit/${user.id}`}>Edit</Link>&nbsp;&nbsp;
-                                        <Link className="btn btn-danger" onClick={() => deleteUser(user.id)}>Delete</Link></td>
+                                        <a className="btn btn-danger" onClick={() => deleteUser(user.id)}>Delete</a></td>
                                     </tr>
                                 ))
                             }
