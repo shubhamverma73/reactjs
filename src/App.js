@@ -10,6 +10,9 @@ import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUsers';
 import ViewUser from './components/users/ViewUser';
 import EditUser from './components/users/EditUser';
+import IncreaseCount from './IncrementVal';
+
+import Hookcall, {Runtime} from './Hookcall';
 
 //npm run json-server for json server
 //npm start for node server
@@ -25,10 +28,17 @@ function App() {
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/contact" component={Contact} />
-				  <Route exact path="/users/add" component={AddUser} />
-				  <Route exact path="/users/view/:id" component={ViewUser} />
-				  <Route exact path="/users/edit/:id" component={EditUser} />
-				  <Route component={NotFound} />
+                  <Route exact path="/users/add" component={AddUser} />
+                  <Route exact path="/users/view/:id" component={ViewUser} />
+                  <Route exact path="/users/edit/:id" component={EditUser} />
+                  <Route exact path="/hookcall" render={() =>
+                    <>
+                      <Hookcall />
+                      <Runtime />
+                    </>
+                  } />
+                  <Route exact path="/increment-value" component={IncreaseCount} />
+                  <Route component={NotFound} />
                 </Switch>
               </div>
             </Router>

@@ -54,6 +54,7 @@ const AddUser = () => {
                         />
                     </div>
                     <button className="btn btn-primary btn-block">Add User</button>
+                    <button className="btn btn-warning btn-block" onClick={() => history.push('/')}>Back</button>
                 </form>
             </div>
         </div>
