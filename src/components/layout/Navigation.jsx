@@ -24,6 +24,9 @@ const Navigation = () => {
                             <LinkContainer to="/increment-value">
                                 <NavDropdown.Item >Increment Value</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/call-js-file">
+                                <NavDropdown.Item >Call JS File</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

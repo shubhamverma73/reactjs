@@ -9,9 +9,9 @@ import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUsers';
 import ViewUser from './components/users/ViewUser';
 import EditUser from './components/users/EditUser';
-import IncreaseCount from './IncrementVal';
-
-import Hookcall, {Runtime} from './Hookcall';
+import IncreaseCount from './temp/IncrementVal';
+import Hookcall, {Runtime} from './temp/Hookcall';
+import JsFile from './temp/JsFile';
 
 //npm run json-server for json server
 //npm start for node server
@@ -37,6 +37,7 @@ function App() {
                     </>
                   } />
                   <Route exact path="/increment-value" component={IncreaseCount} />
+                  <Route exact path="/call-js-file" component={JsFile} />
                   <Route component={NotFound} />
                 </Switch>
               </div>
