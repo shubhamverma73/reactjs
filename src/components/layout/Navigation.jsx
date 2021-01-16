@@ -27,6 +27,12 @@ const Navigation = () => {
                             <LinkContainer to="/call-js-file">
                                 <NavDropdown.Item >Call JS File</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/hookcall">
+                                <NavDropdown.Item >Hookcall</NavDropdown.Item>    
+                            </LinkContainer>
+                            <LinkContainer to="/context">
+                                <NavDropdown.Item >Context (instead of Redux)</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

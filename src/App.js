@@ -12,6 +12,8 @@ import EditUser from './components/users/EditUser';
 import IncreaseCount from './temp/IncrementVal';
 import Hookcall, {Runtime} from './temp/Hookcall';
 import JsFile from './temp/JsFile';
+import Compa from './context/Compa';
+
 
 //npm run json-server for json server
 //npm start for node server
@@ -32,12 +34,13 @@ function App() {
                   <Route exact path="/users/edit/:id" component={EditUser} />
                   <Route exact path="/hookcall" render={() =>
                     <>
-                      <Hookcall />
+                      <Hookcall button="Click Here" />
                       <Runtime />
                     </>
                   } />
                   <Route exact path="/increment-value" component={IncreaseCount} />
                   <Route exact path="/call-js-file" component={JsFile} />
+                  <Route exact path="/context" component={Compa} />
                   <Route component={NotFound} />
                 </Switch>
               </div>

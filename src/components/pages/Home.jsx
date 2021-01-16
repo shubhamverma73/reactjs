@@ -8,7 +8,8 @@ const Home = () => {
     /* ===================== Loader effect before page load ======================== */
     useEffect(() => {
         loadUsers();
-    }, []); //[] used for stop infinite loop, only for 0 time
+    }, []); //[] used for stop infinite loop, only for 0 time. only first time page will render than it will ren
+    // and also if we have 2 button than if we want only first button action than we pass only first button const val
 
     const loadUsers = async () => {
         const result = await axios.get('http://localhost:3003/users');

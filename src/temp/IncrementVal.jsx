@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const IncrementVal = () => {
 
@@ -13,7 +13,11 @@ const IncrementVal = () => {
         } else {
             alert('Value should not be less than 0');
         }        
-    }  
+    } 
+    
+    useEffect(() => {
+        document.title = `value is: ${defaultVal}`;
+    })
 
     return (
             <>
