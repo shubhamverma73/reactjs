@@ -17,7 +17,7 @@ const IncrementVal = () => {
     
     useEffect(() => {
         document.title = `value is: ${defaultVal}`;
-    })
+    });
 
     return (
             <>

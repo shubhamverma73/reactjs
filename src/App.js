@@ -1,10 +1,11 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+//import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import Navigation from './components/layout/Navigation';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUsers';
 import ViewUser from './components/users/ViewUser';
@@ -41,7 +42,8 @@ function App() {
                   <Route exact path="/increment-value" component={IncreaseCount} />
                   <Route exact path="/call-js-file" component={JsFile} />
                   <Route exact path="/context" component={Compa} />
-                  <Route component={NotFound} />
+                  {/* <Route component={NotFound} /> */}
+                  <Redirect to='/' />
                 </Switch>
               </div>
             </Router>
