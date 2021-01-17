@@ -85,8 +85,8 @@ a {
 /* Float four columns side by side */
 .column {
   float: left;
-  width: 20%;
-  padding: 0 10px;
+  width: 73%;
+  padding: 0 0 23px 0;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -122,10 +122,6 @@ a {
 
 .container {
   padding: 2px 16px;
-}
-
-.imageClass {
-  border-radius: 15px 15px 0px 0px;
 }
 
 .manageDivCountBox {

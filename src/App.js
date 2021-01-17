@@ -14,6 +14,7 @@ import IncreaseCount from './temp/IncrementVal';
 import Hookcall, {Runtime} from './temp/Hookcall';
 import JsFile from './temp/JsFile';
 import Compa from './context/Compa';
+import Cardapp from './temp/Cardapp';
 
 
 //npm run json-server for json server
@@ -42,6 +43,7 @@ function App() {
                   <Route exact path="/increment-value" component={IncreaseCount} />
                   <Route exact path="/call-js-file" component={JsFile} />
                   <Route exact path="/context" component={Compa} />
+                  <Route exact path="/card-app" component={Cardapp} />
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>

@@ -33,6 +33,9 @@ const Navigation = () => {
                             <LinkContainer to="/context">
                                 <NavDropdown.Item >Context (instead of Redux)</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/card-app">
+                                <NavDropdown.Item >Card Application</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
