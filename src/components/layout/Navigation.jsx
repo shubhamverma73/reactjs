@@ -36,6 +36,9 @@ const Navigation = () => {
                             <LinkContainer to="/card-app">
                                 <NavDropdown.Item >Card Application</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/image-upload">
+                                <NavDropdown.Item >Image Upload</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

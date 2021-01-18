@@ -15,6 +15,7 @@ import Hookcall, {Runtime} from './temp/Hookcall';
 import JsFile from './temp/JsFile';
 import Compa from './context/Compa';
 import Cardapp from './temp/Cardapp';
+import Imageupload from './components/users/Imageupload';
 
 
 //npm run json-server for json server
@@ -44,6 +45,7 @@ function App() {
                   <Route exact path="/call-js-file" component={JsFile} />
                   <Route exact path="/context" component={Compa} />
                   <Route exact path="/card-app" component={Cardapp} />
+                  <Route exact path="/image-upload" component={Imageupload} />
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>
