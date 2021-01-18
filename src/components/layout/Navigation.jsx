@@ -24,6 +24,18 @@ const Navigation = () => {
                             <LinkContainer exact to="/increment-value">
                                 <NavDropdown.Item >Increment Value</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/call-js-file">
+                                <NavDropdown.Item >Call JS File</NavDropdown.Item>    
+                            </LinkContainer>
+                            <LinkContainer to="/hookcall">
+                                <NavDropdown.Item >Hookcall</NavDropdown.Item>    
+                            </LinkContainer>
+                            <LinkContainer to="/context">
+                                <NavDropdown.Item >Context (instead of Redux)</NavDropdown.Item>    
+                            </LinkContainer>
+                            <LinkContainer to="/card-app">
+                                <NavDropdown.Item >Card Application</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

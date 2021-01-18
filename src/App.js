@@ -1,17 +1,21 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+//import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import Navigation from './components/layout/Navigation';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUsers';
 import ViewUser from './components/users/ViewUser';
 import EditUser from './components/users/EditUser';
-import IncreaseCount from './IncrementVal';
+import IncreaseCount from './temp/IncrementVal';
+import Hookcall, {Runtime} from './temp/Hookcall';
+import JsFile from './temp/JsFile';
+import Compa from './context/Compa';
+import Cardapp from './temp/Cardapp';
 
-import Hookcall, {Runtime} from './Hookcall';
 
 //npm run json-server for json server
 //npm start for node server
@@ -32,12 +36,16 @@ function App() {
                   <Route exact path="/users/edit/:id" component={EditUser} />
                   <Route exact path="/hookcall" render={() =>
                     <>
-                      <Hookcall />
+                      <Hookcall button="Click Here" />
                       <Runtime />
                     </>
                   } />
                   <Route exact path="/increment-value" component={IncreaseCount} />
-                  <Route component={NotFound} />
+                  <Route exact path="/call-js-file" component={JsFile} />
+                  <Route exact path="/context" component={Compa} />
+                  <Route exact path="/card-app" component={Cardapp} />
+                  {/* <Route component={NotFound} /> */}
+                  <Redirect to='/' />
                 </Switch>
               </div>
             </Router>

@@ -8,7 +8,9 @@ const Home = () => {
     /* ===================== Loader effect before page load ======================== */
     useEffect(() => {
         loadUsers();
-    }, []); //[] used for stop infinite loop, only for 0 time
+        //fetchApi();
+    }, []); //[] used for stop infinite loop, only for 0 time. only first time page will render than it will ren
+    // and also if we have 2 button than if we want only first button action than we pass only first button const val
 
     const loadUsers = async () => {
         const result = await axios.get('http://localhost:3003/users');
@@ -20,6 +22,22 @@ const Home = () => {
         await axios.delete(`http://localhost:3003/users/${id}`);
         loadUsers();
     }
+
+    /*const fetchApi = async() => {
+        const url = 'http://localhost:3003/users';
+        const response = await fetch(url);
+        const resJson = await response.json();
+        console.log(resJson);
+        console.log(resJson[3].name);
+    };*/
+
+    /*You now understand how to get data for your React components from an external API using fetch and axios.
+    Both achieve the same objective and you can choose either of the two.
+    
+    However, keep in mind that axios should be added as an npm dependency,
+    whereas fetch is available out of the box as a web API.
+    Another difference is that axios returns you the transformed JSON data,
+    but with fetch you need to parse the response and extract the JSON before passing it to React components.*/
 
     return (
         <>

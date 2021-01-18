@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
 
-const Hookcall = () => {
+const Hookcall = (props) => {
     let currTIme = new Date().toLocaleTimeString();
 
     const [currentTIme, setTIme] = useState(currTIme); //useState is hook function that return current data and function
@@ -15,7 +16,7 @@ const Hookcall = () => {
         <>
             <div className="manageDivCountBoxTime">
                 <span id="timeCount">{currentTIme}</span><br/><br/>
-                <button className="buttonClass" onClick={ChangeTIme}>Click Here</button>
+                <button className="buttonClass" onClick={ChangeTIme}>{props.button}</button>
             </div>
         </>
     );
@@ -24,11 +25,11 @@ const Hookcall = () => {
 const Runtime = () => {
     let currTIme = new Date().toLocaleTimeString();
 
-    const [currentTIme, setTIme] = useState(currTIme);
+    const [currentTIme, setTime] = useState(currTIme);
 
     const updateTIme = () => {
         currTIme = new Date().toLocaleTimeString();
-        setTIme(currTIme);
+        setTime(currTIme);
     };
     setInterval(updateTIme, 1000);
 
