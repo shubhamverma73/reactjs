@@ -23,12 +23,15 @@ const Imageupload = () => {
         const formData = new FormData();
         formData.append("image", image.raw);
 
-        await fetch("YOUR_URL", {
+        await fetch("http://localtest.com/api/file_upload.php", {
             method: "POST",
-            headers: {
+            /*headers: {
                 "Content-Type": "multipart/form-data"
-            },
+            },*/
             body: formData
+        }).then((res) => res.json())
+        .then((data) => {
+            console.log(data);
         });
     };
 
