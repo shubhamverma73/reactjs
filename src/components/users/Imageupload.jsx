@@ -23,7 +23,8 @@ const Imageupload = () => {
         const formData = new FormData();
         formData.append("image", image.raw);
 
-        await fetch("http://localtest.com/api/file_upload.php", {
+        //await fetch("http://localtest.com/api/file_upload.php", {
+        await fetch("http://localhost/react/file_upload.php", {
             method: "POST",
             /*headers: {
                 "Content-Type": "multipart/form-data"
@@ -33,10 +34,6 @@ const Imageupload = () => {
         .then((data) => {
             console.log(data);
         });
-        let responseJson = await res.json();
-        if (responseJson.status == 1) {
-            alert('Upload Successful');
-        }
     };
 
     return (
