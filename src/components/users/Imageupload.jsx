@@ -23,15 +23,15 @@ const Imageupload = () => {
         const formData = new FormData();
         formData.append("image", image.raw);
 
-        var url = "https://cors-anywhere.herokuapp.com/http://localhost/file_upload.php";
-        let res = await fetch(url, {
+        await fetch("http://localtest.com/api/file_upload.php", {
             method: "POST",
-            crossDomain:true,
-            headers: {
-                "Content-Type": "multipart/form-data",
-                "Access-Control-Allow-Origin": "127.0.0.1"
-            },
+            /*headers: {
+                "Content-Type": "multipart/form-data"
+            },*/
             body: formData
+        }).then((res) => res.json())
+        .then((data) => {
+            console.log(data);
         });
         let responseJson = await res.json();
         if (responseJson.status == 1) {
