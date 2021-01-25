@@ -39,6 +39,9 @@ const Navigation = () => {
                             <LinkContainer to="/image-upload">
                                 <NavDropdown.Item >Image Upload</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/dropdown">
+                                <NavDropdown.Item >Dropdown</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

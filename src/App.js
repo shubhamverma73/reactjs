@@ -16,6 +16,7 @@ import JsFile from './temp/JsFile';
 import Compa from './context/Compa';
 import Cardapp from './temp/Cardapp';
 import Imageupload from './components/users/Imageupload';
+import Dropdown from './temp/Dropdown';
 
 
 //npm run json-server for json server
@@ -46,6 +47,7 @@ function App() {
                   <Route exact path="/context" component={Compa} />
                   <Route exact path="/card-app" component={Cardapp} />
                   <Route exact path="/image-upload" component={Imageupload} />
+                  <Route exact path="/dropdown" component={Dropdown} />
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>
