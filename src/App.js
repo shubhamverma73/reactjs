@@ -17,6 +17,8 @@ import Compa from './context/Compa';
 import Cardapp from './temp/Cardapp';
 import Imageupload from './components/users/Imageupload';
 import Dropdown from './temp/Dropdown';
+import Passvalue from './temp/Passvalue';
+import Multiplefields from './temp/Multiplefields';
 
 
 //npm run json-server for json server
@@ -48,6 +50,8 @@ function App() {
                   <Route exact path="/card-app" component={Cardapp} />
                   <Route exact path="/image-upload" component={Imageupload} />
                   <Route exact path="/dropdown" component={Dropdown} />
+                  <Route exact path="/pass-value-to-function" component={Passvalue} />
+                  <Route exact path="/multiple-fields" component={Multiplefields} />
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>

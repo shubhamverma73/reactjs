@@ -42,6 +42,12 @@ const Navigation = () => {
                             <LinkContainer to="/dropdown">
                                 <NavDropdown.Item >Dropdown</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer to="/pass-value-to-function">
+                                <NavDropdown.Item >Pass Value to- Function</NavDropdown.Item>    
+                            </LinkContainer>
+                            <LinkContainer to="/multiple-fields">
+                                <NavDropdown.Item >Multile Fields</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
