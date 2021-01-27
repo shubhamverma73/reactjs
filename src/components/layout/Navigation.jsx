@@ -51,6 +51,9 @@ const Navigation = () => {
                             <LinkContainer exact to="/multiple-fields">
                                 <NavDropdown.Item >Multile Fields</NavDropdown.Item>    
                             </LinkContainer>
+                            <LinkContainer exact to="/datepicker">
+                                <NavDropdown.Item >Datepicker</NavDropdown.Item>    
+                            </LinkContainer>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

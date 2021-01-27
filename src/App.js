@@ -20,6 +20,7 @@ import Slider from './components/pages/Slider';
 import Dropdown from './temp/Dropdown';
 import Passvalue from './temp/Passvalue';
 import Multiplefields from './temp/Multiplefields';
+import Datepicker from './temp/Datepicker';
 
 //npm run json-server for json server
 //npm start for node server
@@ -53,6 +54,7 @@ function App() {
                   <Route exact path="/dropdown" component={Dropdown} />
                   <Route exact path="/pass-value-to-function" component={Passvalue} />
                   <Route exact path="/multiple-fields" component={Multiplefields} />
+                  <Route exact path="/datepicker" component={Datepicker} />
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>
