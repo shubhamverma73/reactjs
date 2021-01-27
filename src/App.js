@@ -16,7 +16,13 @@ import JsFile from './temp/JsFile';
 import Compa from './context/Compa';
 import Cardapp from './temp/Cardapp';
 import Imageupload from './components/users/Imageupload';
+<<<<<<< HEAD
 import Slider from './components/pages/Slider';
+=======
+import Dropdown from './temp/Dropdown';
+import Passvalue from './temp/Passvalue';
+import Multiplefields from './temp/Multiplefields';
+>>>>>>> c8925b6c38da2e306b0b5245769c40e99892295d
 
 
 //npm run json-server for json server
@@ -47,7 +53,13 @@ function App() {
                   <Route exact path="/context" component={Compa} />
                   <Route exact path="/card-app" component={Cardapp} />
                   <Route exact path="/image-upload" component={Imageupload} />
+<<<<<<< HEAD
                   <Route exact path="/slider" component={Slider} />
+=======
+                  <Route exact path="/dropdown" component={Dropdown} />
+                  <Route exact path="/pass-value-to-function" component={Passvalue} />
+                  <Route exact path="/multiple-fields" component={Multiplefields} />
+>>>>>>> c8925b6c38da2e306b0b5245769c40e99892295d
                   {/* <Route component={NotFound} /> */}
                   <Redirect to='/' />
                 </Switch>
