@@ -39,10 +39,9 @@ const Navigation = () => {
                             <LinkContainer to="/image-upload">
                                 <NavDropdown.Item >Image Upload</NavDropdown.Item>    
                             </LinkContainer>
-<<<<<<< HEAD
                             <LinkContainer to="/slider">
                                 <NavDropdown.Item >Slider</NavDropdown.Item>    
-=======
+                            </LinkContainer>
                             <LinkContainer to="/dropdown">
                                 <NavDropdown.Item >Dropdown</NavDropdown.Item>    
                             </LinkContainer>
@@ -51,7 +50,6 @@ const Navigation = () => {
                             </LinkContainer>
                             <LinkContainer to="/multiple-fields">
                                 <NavDropdown.Item >Multile Fields</NavDropdown.Item>    
->>>>>>> c8925b6c38da2e306b0b5245769c40e99892295d
                             </LinkContainer>
                         </NavDropdown>
                         </Nav>
