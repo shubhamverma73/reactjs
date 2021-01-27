@@ -13,7 +13,7 @@ const Navigation = () => {
         <>
             <div>
                 <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                    <Link className="navbar-brand" to="/">React</Link>
+                    <Link className="navbar-brand" exact to="/">React</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
@@ -24,31 +24,31 @@ const Navigation = () => {
                             <LinkContainer exact to="/increment-value">
                                 <NavDropdown.Item >Increment Value</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/call-js-file">
+                            <LinkContainer exact to="/call-js-file">
                                 <NavDropdown.Item >Call JS File</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/hookcall">
+                            <LinkContainer exact to="/hookcall">
                                 <NavDropdown.Item >Hookcall</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/context">
+                            <LinkContainer exact to="/context">
                                 <NavDropdown.Item >Context (instead of Redux)</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/card-app">
+                            <LinkContainer exact to="/card-app">
                                 <NavDropdown.Item >Card Application</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/image-upload">
+                            <LinkContainer exact to="/image-upload">
                                 <NavDropdown.Item >Image Upload</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/slider">
+                            <LinkContainer exact to="/slider">
                                 <NavDropdown.Item >Slider</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/dropdown">
+                            <LinkContainer exact to="/dropdown">
                                 <NavDropdown.Item >Dropdown</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/pass-value-to-function">
+                            <LinkContainer exact to="/pass-value-to-function">
                                 <NavDropdown.Item >Pass Value to- Function</NavDropdown.Item>    
                             </LinkContainer>
-                            <LinkContainer to="/multiple-fields">
+                            <LinkContainer exact to="/multiple-fields">
                                 <NavDropdown.Item >Multile Fields</NavDropdown.Item>    
                             </LinkContainer>
                         </NavDropdown>
