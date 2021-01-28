@@ -1,6 +1,7 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useForm, useFieldArray } from 'react-hook-form';
-
+import Select from 'react-select';
+import { stateOptions } from '../assets/data_new';
 
 const UserInformation = (props) => {
     const { register, control } = props;
@@ -19,7 +20,7 @@ const UserInformation = (props) => {
 
     useEffect(() => {
         onClickAdd();
-    }, []); 
+    }, []);
         
     return (
         <div className="card mb-4">
@@ -29,7 +30,7 @@ const UserInformation = (props) => {
                     fields.map((item, index) => (
                         <div className="form-row form-group" key={item.id}>
                             <div className="col">
-                            <input type="text" className="form-control firstName" name={`users[${index}].firstname`} defaultValue={item.firstname} ref={register()} placeholder="Enter Your First name" />
+                                <input type="text" className="form-control firstName" name={`users[${index}].firstname`} defaultValue={item.firstname} ref={register()} placeholder="Enter Your First name" />
                             </div>
                             <div className="col">
                                 <input type="text" className="form-control lastName" name={`users[${index}].lastname`}  defaultValue={item.lastname} ref={register()} placeholder="Enter Your Last name" />
@@ -71,6 +72,14 @@ const Multiplefields = () => {
 
     const onSubmit = data => {
         console.log(data)
+    } 
+
+    const [options, selectedOption ] = useState();
+    const [optionsDrop, selectedOptionDrop ] = useState('Del');
+
+    const handleChange = (selectedOptions) => {
+        selectedOption(selectedOptions);
+        selectedOptionDrop(selectedOptions.value);
     }
 
     const basciForm = (
@@ -79,8 +88,13 @@ const Multiplefields = () => {
                 <div className="card-header">User Detsails</div>
                 <div className="card-body">
                     <div className="form-group">
-                        <p className="form-error">{errors.fullname && 'Fullname are required'}
-                        <input type="text" className="form-control" name="fullname" id="fullname" ref={register({required: true})} placeholder="Firstname" /></p>
+                        <p className="form-error">{errors.fullname && 'Fullname are required'}</p>
+                        <input type="text" className="form-control" name="fullname" id="fullname" ref={register({required: true})} placeholder="Firstname" />
+                    </div>
+                    <div className="form-group">
+                        <p className="form-error">{errors.fullname && 'Fullname are required'}</p>
+                        <Select value={options} onChange={handleChange} options={stateOptions} />
+                        <input type="hidden" name="country" value={optionsDrop} ref={register({required: true})} />
                     </div>
                     <div className="form-group">
                         <p className="form-error">{errors.email && 'Email are required'}</p>
