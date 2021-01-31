@@ -20,6 +20,7 @@ const Navigation = () => {
                         <NavLink className="nav-link" exact to="/">Home</NavLink>
                         <NavLink className="nav-link" exact to="/about">About</NavLink>
                         <NavLink className="nav-link" exact to="/contact">Contact</NavLink>
+                        <NavLink className="nav-link" exact to="/members">Members</NavLink>
                         <NavDropdown title="Dropdown" exact id="collasible-nav-dropdown">
                             <LinkContainer exact to="/increment-value">
                                 <NavDropdown.Item >Increment Value</NavDropdown.Item>    

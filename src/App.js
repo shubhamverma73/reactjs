@@ -22,15 +22,27 @@ import Passvalue from './temp/Passvalue';
 import Multiplefields from './temp/Multiplefields';
 import Datepicker from './temp/Datepicker';
 import Dropdownnew from './temp/Dropdownnew';
+import Members from './components/pages/Members';
+import firebase from './firebase';
 
 //npm run json-server for json server
 //npm start for node server
 //"json-server": "json-server --watch db.json --port 3003", /* You can remove this when you do not need it json server */
 
 function App() {
+
+  React.useEffect(() => {
+    const msg=firebase.messaging();
+    msg.requestPermission().then(()=>{
+      return msg.getToken();
+    }).then((data)=>{
+      console.log("token",data);
+    })
+  });
+
   return ( 
           <>            
-            <Router>
+            <Router history={hashHistory} >
               <div className="App">
                 <Navigation />
                 <Switch>
@@ -57,8 +69,9 @@ function App() {
                   <Route exact path="/multiple-fields" component={Multiplefields} />
                   <Route exact path="/datepicker" component={Datepicker} />
                   <Route exact path="/dropdownnew" component={Dropdownnew} />
-                  {/* <Route component={NotFound} /> */}
-                  <Redirect to='/' />
+                  <Route exact path="/members" component={Members} />
+                  <Route component={NotFound} />
+                  {/* <Redirect to='/' /> */}
                 </Switch>
               </div>
             </Router>
