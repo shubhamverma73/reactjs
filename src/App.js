@@ -1,3 +1,5 @@
+// =============== Apache configuration for server to handel dom router =========================
+//https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-18-04
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 //import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
@@ -42,7 +44,7 @@ function App() {
 
   return ( 
           <>            
-            <Router history={hashHistory} >
+            <Router>
               <div className="App">
                 <Navigation />
                 <Switch>

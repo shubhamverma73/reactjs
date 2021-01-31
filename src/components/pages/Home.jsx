@@ -13,7 +13,8 @@ const Home = () => {
     // and also if we have 2 button than if we want only first button action than we pass only first button const val
 
     const loadUsers = async () => {
-        const result = await axios.get('http://localhost:3003/users');
+        //const result = await axios.get('http://localhost:3003/users');
+        const result = await axios.get('http://shubhverma.tech/api/conn.php');
         setUser(result.data.reverse());
     }
 
@@ -62,9 +63,9 @@ const Home = () => {
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.username}</td>
-                                        <td><Link className="btn btn-primary" to={`/users/view/${user.id}`}>View</Link>&nbsp;&nbsp;
-                                        <Link className="btn btn-success" to={`/users/edit/${user.id}`}>Edit</Link>&nbsp;&nbsp;
-                                        <a className="btn btn-danger" onClick={() => deleteUser(user.id)}>Delete</a></td>
+                                        <td><Link className="btn btn-primary" to={`/users/view/${user._id}`}>View</Link>&nbsp;&nbsp;
+                                        <Link className="btn btn-success" to={`/users/edit/${user._id}`}>Edit</Link>&nbsp;&nbsp;
+                                        <a className="btn btn-danger" onClick={() => deleteUser(user._id)}>Delete</a></td>
                                     </tr>
                                 ))
                             }
