@@ -20,7 +20,11 @@ const Navigation = () => {
                         <NavLink className="nav-link" exact to="/">Home</NavLink>
                         <NavLink className="nav-link" exact to="/about">About</NavLink>
                         <NavLink className="nav-link" exact to="/contact">Contact</NavLink>
+                        <NavLink className="nav-link" exact to="/members">Members</NavLink>
                         <NavDropdown title="Dropdown" exact id="collasible-nav-dropdown">
+                            <LinkContainer exact to="/users/add">
+                                <NavDropdown.Item >Add User</NavDropdown.Item>    
+                            </LinkContainer>
                             <LinkContainer exact to="/increment-value">
                                 <NavDropdown.Item >Increment Value</NavDropdown.Item>    
                             </LinkContainer>
@@ -60,7 +64,7 @@ const Navigation = () => {
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
-                    <NavLink className="btn btn-dark" exact to="/users/add">Add User</NavLink>
+                    {/* <NavLink className="btn btn-dark" exact to="/users/add">Add User</NavLink> */}
                 </Navbar>
             </div>
         </>
