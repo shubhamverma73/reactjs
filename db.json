@@ -186,7 +186,7 @@
     },
     {
       "id": 10,
-      "name": "Clementina DuBuque",
+      "name": "Clementina Test",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
       "address": {
@@ -214,6 +214,14 @@
       "phone": "7762233464",
       "website": "shubham.com",
       "id": 11
+    },
+    {
+      "name": "Sachid",
+      "username": "sachid",
+      "email": "sachid@gmail.com",
+      "phone": "954871256",
+      "website": "sachid.com",
+      "id": 12
     }
   ]
 }
