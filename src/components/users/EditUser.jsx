@@ -26,13 +26,38 @@ const EditUser = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        await axios.put(`http://localhost:3003/users/${id}`, user);
-        history.push('/');
+        const nawArr = {...user, "id":id};
+        const formData = JSON.stringify(nawArr);
+        await fetch("http://shubhverma.tech/api/create.php", {
+            method: "POST",
+            body: formData
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.status === "1") {
+                alert('Record updated');
+                history.push('/');
+            } else {
+                alert('Record not update');
+                history.push('/');
+            }
+        });
     }
 
     const loadUsers = async (event) => {
-        const result = await axios.get(`http://localhost:3003/users/${id}`);
-        setUser(result.data);
+        const formData = JSON.stringify({ "id": id }); 
+        await fetch("http://shubhverma.tech/api/read.php", {
+            method: "POST",
+            body: formData
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.status === "1") {
+                setUser(data.data);
+            } else {
+                alert('Record not found');
+            }
+        });
     } 
 
     return (

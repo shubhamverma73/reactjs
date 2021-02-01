@@ -24,8 +24,19 @@ const ViewUser = () => {
     const { name, username, email, phone, website } = user;
 
     const loadUsers = async (event) => {
-        const result = await axios.get(`http://localhost:3003/users/${id}`);
-        setUser(result.data);
+        const formData = JSON.stringify({ "id": id }); 
+        await fetch("http://shubhverma.tech/api/read.php", {
+            method: "POST",
+            body: formData
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.status === "1") {
+                setUser(data.data);
+            } else {
+                alert('Record not found');
+            }
+        });        
     } 
 
     return (

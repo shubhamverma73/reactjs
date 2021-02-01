@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const Members = () => {
     const[members, setMmembers] = useState([]);
     const[isInternet, setInternet] = useState('You are online');
-    let setClassVal;
     
     useEffect(() => {
         loadMembers();

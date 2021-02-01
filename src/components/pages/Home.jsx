@@ -20,17 +20,21 @@ const Home = () => {
 
     const deleteUser = async (id) => {
         //confirm("Are you sure, you want do delete?");
-        await axios.delete(`http://localhost:3003/users/${id}`);
+        const formData = JSON.stringify({ "id": id }); 
+        await fetch("http://shubhverma.tech/api/delete.php", {
+            method: "POST",
+            body: formData
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data >= 0) {
+                alert('Record deleted');
+            } else {
+                alert('Record not deleted');
+            }
+        });
         loadUsers();
     }
-
-    /*const fetchApi = async() => {
-        const url = 'http://localhost:3003/users';
-        const response = await fetch(url);
-        const resJson = await response.json();
-        console.log(resJson);
-        console.log(resJson[3].name);
-    };*/
 
     /*You now understand how to get data for your React components from an external API using fetch and axios.
     Both achieve the same objective and you can choose either of the two.

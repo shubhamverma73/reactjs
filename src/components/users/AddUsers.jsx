@@ -24,8 +24,21 @@ const AddUser = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        await axios.post('http://localhost:3003/users', user);
-        history.push('/');
+        const formData = JSON.stringify(user); 
+        await fetch("http://shubhverma.tech/api/create.php", {
+            method: "POST",
+            body: formData
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.status === "1") {
+                alert('Record added');
+                history.push('/');
+            } else {
+                alert('Record not added');
+                history.push('/');
+            }
+        });
     }
 
     return (
