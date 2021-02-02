@@ -28,7 +28,7 @@ const EditUser = () => {
         event.preventDefault();
         const nawArr = {...user, "id":id};
         const formData = JSON.stringify(nawArr);
-        await fetch("http://shubhverma.tech/api/create.php", {
+        await fetch("http://shubhverma.tech/api/update.php", {
             method: "POST",
             body: formData
         })
