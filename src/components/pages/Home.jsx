@@ -69,7 +69,8 @@ const Home = () => {
                                         <td>{user.username}</td>
                                         <td><Link className="btn btn-primary" to={`/users/view/${user._id.$oid}`}>View</Link>&nbsp;&nbsp;
                                         <Link className="btn btn-success" to={`/users/edit/${user._id.$oid}`}>Edit</Link>&nbsp;&nbsp;
-                                        <a className="btn btn-danger" onClick={() => deleteUser(user._id.$oid)}>Delete</a></td>
+                                        {/* <a href="#" className="btn btn-danger" onClick={() => deleteUser(user._id.$oid)}>Delete</a></td> */}
+                                        <button className="btn btn-danger" onClick={() => deleteUser(user._id.$oid)}>Delete</button></td>
                                     </tr>
                                 ))
                             }

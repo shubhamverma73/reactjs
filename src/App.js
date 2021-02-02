@@ -7,7 +7,7 @@ import Navigation from './components/layout/Navigation';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
-import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; //Redirect hook
 import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUsers';
 import ViewUser from './components/users/ViewUser';
@@ -18,7 +18,6 @@ import JsFile from './temp/JsFile';
 import Compa from './context/Compa';
 import Cardapp from './temp/Cardapp';
 import Imageupload from './components/users/Imageupload';
-import Slider from './components/pages/Slider';
 import Dropdown from './temp/Dropdown';
 import Passvalue from './temp/Passvalue';
 import Multiplefields from './temp/Multiplefields';
@@ -65,7 +64,6 @@ function App() {
                   <Route exact path="/context" component={Compa} />
                   <Route exact path="/card-app" component={Cardapp} />
                   <Route exact path="/image-upload" component={Imageupload} />
-                  <Route exact path="/slider" component={Slider} />
                   <Route exact path="/dropdown" component={Dropdown} />
                   <Route exact path="/pass-value-to-function" component={Passvalue} />
                   <Route exact path="/multiple-fields" component={Multiplefields} />

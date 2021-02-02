@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
 
 const ViewUser = () => {
     let history = useHistory(); //history.goBack() for go back page not for specific page
-    const { id, prdname } = useParams(); //Here id is that value which is passed from home component edit link and defined in Routing App.js
+    //const { id, prdname } = useParams();
+    const { id } = useParams(); //Here id is that value which is passed from home component edit link and defined in Routing App.js
     
     //console.log(id);
     //console.log(prdname);
 
     useEffect(() => {
         loadUsers();
-    }, []);
+    });
 
     const[user, setUser] = useState({
         name: "",

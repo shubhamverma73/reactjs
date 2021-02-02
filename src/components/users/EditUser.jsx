@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import {useHistory, useParams } from 'react-router-dom';
 
 const EditUser = () => {
@@ -8,7 +8,7 @@ const EditUser = () => {
     
     useEffect(() => {
         loadUsers();
-    }, []);
+    });
 
     const[user, setUser] = useState({
         name: "",

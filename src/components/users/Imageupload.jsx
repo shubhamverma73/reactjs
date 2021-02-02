@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+//import axios from 'axios';
+//import { useHistory, useParams } from 'react-router-dom';
 
 const Imageupload = () => {
     const[showMessage, setshowMessage] = useState('hide');
     const[messageType, setmessageType] = useState('success');
     const[message, setMessage] = useState();
-    let history = useHistory(); //history.goBack() for go back page not for specific page
+    //let history = useHistory(); //history.goBack() for go back page not for specific page
     const [image, setImage] = useState({
         preview: "",
         raw: ""

@@ -1,3 +1,5 @@
+//https://stackoverflow.com/questions/52299246/cant-find-serviceworker-in-navigator-anymore
+
 /*export default function swDev()
 {
   function determineAppServerKey() {
@@ -38,6 +40,6 @@
 export default function swDev() {
 	let swUrl=  `${process.env.PUBLIC_URL}/sw.js`;
 	navigator.serviceWorker.register(swUrl).then((response)=>{
-		console.log("response",response)
+		//console.log("response",response)
 	});
 }
