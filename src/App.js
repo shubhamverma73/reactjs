@@ -25,7 +25,7 @@ import Multiplefields from './temp/Multiplefields';
 import Datepicker from './temp/Datepicker';
 import Dropdownnew from './temp/Dropdownnew';
 import Members from './components/pages/Members';
-import firebase from './firebase';
+//import firebase from './firebase';
 
 //npm run json-server for json server
 //npm start for node server
@@ -33,14 +33,14 @@ import firebase from './firebase';
 
 function App() {
 
-  React.useEffect(() => {
+  /*React.useEffect(() => {
     const msg=firebase.messaging();
     msg.requestPermission().then(()=>{
       return msg.getToken();
     }).then((data)=>{
       console.log("token",data);
     })
-  });
+  });*/
 
   return ( 
           <>            
