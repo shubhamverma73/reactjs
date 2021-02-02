@@ -5,10 +5,6 @@ import {useHistory, useParams } from 'react-router-dom';
 const EditUser = () => {
     let history = useHistory();
     const { id } = useParams(); //Here id is that value which is passed from home component edit link and defined in Routing App.js
-    
-    useEffect(() => {
-        loadUsers();
-    });
 
     const[user, setUser] = useState({
         name: "",
@@ -45,7 +41,7 @@ const EditUser = () => {
     }
 
     const loadUsers = async (event) => {
-        const formData = JSON.stringify({ "id": id }); 
+        /*const formData = JSON.stringify({ "id": id }); 
         await fetch("http://shubhverma.tech/api/read.php", {
             method: "POST",
             body: formData
@@ -57,8 +53,24 @@ const EditUser = () => {
             } else {
                 alert('Record not found');
             }
+        });*/
+
+        const formData = JSON.stringify({ "id": id }); 
+        const response = await fetch("http://shubhverma.tech/api/read.php", {
+            method: "POST",
+            body: formData
         });
+        const json = await response.json();
+        if(json.status === "1") {
+            setUser(json.data);
+        } else {
+            alert('Record not found');
+        }
     } 
+    
+    useEffect(() => {
+        loadUsers();
+    }, []);
 
     return (
         <div className="container">
