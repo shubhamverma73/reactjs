@@ -20,7 +20,7 @@ const UserInformation = (props) => {
 
     useEffect(() => {
         onClickAdd();
-    }, []);
+    });
         
     return (
         <div className="card mb-4">

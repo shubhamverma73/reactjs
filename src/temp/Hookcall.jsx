@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { propTypes } from 'react-bootstrap/esm/Image';
+//import { propTypes } from 'react-bootstrap/esm/Image';
 
 
 const Hookcall = (props) => {
