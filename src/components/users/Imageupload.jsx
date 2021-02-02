@@ -39,8 +39,7 @@ const Imageupload = () => {
         const formData = new FormData();
         formData.append("image", image.raw);
 
-        //await fetch("http://localtest.com/api/file_upload.php", {
-        await fetch("http://localhost/react/file_upload.php", {
+        await fetch("http://shubhverma.tech/api/file_upload.php", {
             method: "POST",
             /*headers: {
                 "Content-Type": "multipart/form-data"
