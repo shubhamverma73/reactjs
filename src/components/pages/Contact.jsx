@@ -25,19 +25,19 @@ const Contact = () => {
 			<div className="container">
 				<form onSubmit={onSubmit}>
 					<label htmlFor="fname">First Name</label>
-					<input type="text" name="fname" id="fname" onChange={inputChange} placeholder="Your First Name" />
+					<input type="text" name="fname" id="fname" onChange={inputChange} placeholder="Your First Name" required />
 
 					<label htmlFor="lname">Last Name</label>
-					<input type="text" name="lname" id="lname" onChange={inputChange} placeholder="Your Last Name" />
+					<input type="text" name="lname" id="lname" onChange={inputChange} placeholder="Your Last Name" required />
 
 					<label htmlFor="lname">Email</label>
-					<input type="text" name="email" id="email" onChange={inputChange} placeholder="Your Email" />
+					<input type="text" name="email" id="email" onChange={inputChange} placeholder="Your Email" required />
 
 					<label htmlFor="lname">Mobile</label>
-					<input type="text" name="mobile" id="mobile" onChange={inputChange} placeholder="Your Mobile" />
+					<input type="text" name="mobile" id="mobile" onChange={inputChange} placeholder="Your Mobile" required />
 
 					<label htmlFor="subject">Subject</label>
-					<textarea id="subject" name="subject" placeholder="Write something.." onChange={inputChange} style={{height:"200px"}}></textarea>
+					<textarea id="subject" name="subject" placeholder="Write something.." onChange={inputChange} style={{height:"200px"}} required></textarea>
 
 					<button type="submit" className="buttonClass">Click Here</button>
 				</form>
