@@ -14,7 +14,8 @@ const Home = () => {
 
     const loadUsers = async () => {
         //const result = await axios.get('http://localhost:3003/users');
-        const result = await axios.get('http://shubhverma.tech/api/conn.php');
+        //const result = await axios.get('http://shubhverma.tech/api/conn.php');
+        const result = await axios.get('http://shubhverma.tech/laravel_api/mongo-test');
         setUser(result.data.reverse());
     }
 
