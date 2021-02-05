@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /src/components/pages/Slider.jsx
+.eslintcache
 
 # testing
 /coverage
